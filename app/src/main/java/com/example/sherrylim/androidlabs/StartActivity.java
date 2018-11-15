@@ -4,110 +4,85 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import static com.example.sherrylim.androidlabs.LoginActivity.ACTIVITY_NAME;
-
 public class StartActivity extends Activity {
-    Button btn, btn2,btn3;
-
+    protected static final String ACTIVITY_NAME = "StartActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(ACTIVITY_NAME, "In onCreate()");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        fdv();
-        btn = findViewById(R.id.button);
+        Button button1 = findViewById(R.id.button1);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        button1.setOnClickListener(e -> {
+                Intent secondIntent = new Intent(StartActivity.this,
+                        ListItemsActivity.class);
+                startActivityForResult(secondIntent, 50);
 
-                Intent intent = new Intent(StartActivity.this, ListItemsActivity.class);
-
-
-                int REQUEST_CODE = 50;
-                startActivityForResult(intent, REQUEST_CODE);
-            }
         });
 
-        /* this is lab 4
-         */
-        btn2 = findViewById(R.id.ChatButton);
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+
+        Button button2 = findViewById(R.id.button2);
+
+        button2.setOnClickListener(e -> {
+
                 Log.i(ACTIVITY_NAME, "User clicked Start Chat");
-                Intent intent = new Intent(StartActivity.this, ChatWindow.class);
-                startActivity(intent);
-            }
+                Intent thirdIntent = new Intent(StartActivity.this,
+                        ChatWindow.class);
+                startActivity(thirdIntent);
+
         });
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(StartActivity.this, WeatherForecast.class);
-                startActivity(intent);
-            }
+        Button button3 = findViewById(R.id.button3);
+
+        button3.setOnClickListener(e -> {
+            Intent fourthIntent = new Intent(StartActivity.this,
+                    WeatherForcast.class);
+            startActivity(fourthIntent);
+
         });
 
 
-    }// end in on create
-
-    public void fdv(){
-        btn2 = findViewById(R.id.ChatButton);
-        btn = findViewById(R.id.button);
-        btn3= findViewById(R.id.WeatherForecastBtn);
     }
-
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK && requestCode == 50) {
-            String messagePassed = data.getStringExtra("Response")+" ListItemsActivity passed: My information to share";
+    protected void onActivityResult(int requestCode, int responseCode, Intent data){
+        if(requestCode == 50 && responseCode == Activity.RESULT_OK){
+            String messagePassed = data.getStringExtra("Response");
+            CharSequence text = "ListItemsActivity passed: "+ messagePassed;
+            int duration = Toast.LENGTH_LONG; //= Toast.LENGTH_LONG if Off
+
+            Toast toast = Toast.makeText(getApplicationContext(), text, duration); //this is the ListActivity
+
+            toast.show(); //display your message box
             Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
-            Toast.makeText(this,messagePassed,
-                    Toast.LENGTH_LONG).show();
         }
     }
-
-
-
     @Override
-    public void onStart(){
-        super.onStart();
-        Log.i("ACTIVITY_NAME","IN onStart()");
-    }
-
-    @Override
-    public void onResume(){
+    protected void onResume(){
         super.onResume();
-        Log.i("ACTIVITY_NAME","IN onResume()");
-
+        Log.i(ACTIVITY_NAME, "In onResume()");
     }
-
-
     @Override
-    public void onPause(){
+    protected void onStart(){
+        super.onStart();
+        Log.i(ACTIVITY_NAME, "In onStart()");
+    }
+    @Override
+    protected void onPause(){
         super.onPause();
-        Log.i("ACTIVITY_NAME","IN onPause()");
-
+        Log.i(ACTIVITY_NAME, "In onPause()");
     }
-
-
     @Override
-    public void onStop(){
+    protected void onStop(){
         super.onStop();
-        Log.i("ACTIVITY_NAME","IN onStop()");
-
+        Log.i(ACTIVITY_NAME, "In onStop()");
     }
-
     @Override
-    public void onDestroy(){
+    protected void onDestroy(){
         super.onDestroy();
-        Log.i("ACTIVITY_NAME","IN  onDestroy()");
-
+        Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
-
 }
