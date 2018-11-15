@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Lab7</string>
+    <string name="hello_message">Hello World!</string>
+    <string name="ButtonText">I\'m a button</string>
+    <string name="login">login</string>
+    <string name="login_name">login name</string>
+    <string name="passwd">password</string>
+    <string name="switch1">What does this do?</string>
+    <string name="check">Check box</string>
+    <string name="radio">Radio button</string>
+    <string name="dialog_message">Do you want to finish this activity?</string>
+    <string name="dialog_title">Quit Activity</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="chat">Start Chat</string>
+    <string name="Send">Send</string>
+    <string name="title_activity_weather_forcast">WeatherForcast</string>
+    <string name="weather">Weather Forcast</string>
+    <string name="current">Current Temperature: </string>
+    <string name="max">Max Temperature: </string>
+    <string name="min">Min Temperature: </string>
+    <string name="wind">Wind Speed: </string>
+    <string name="message">MessageHere</string>
+    <string name="ID">ID=</string>
+    <string name="delete">DELETE THIS MESSAGE</string>
+    <string name="chatbutton">chatbutton</string>
+    <string name="WeatherForecastBTN">WeatherForecastBTN</string>
+    <string name="wind_spd">wind_spd</string>
+    <string name="max_temp">max_temp</string>
+    <string name="min_temp">min_temp</string>
+    <string name="login_hint">login_hint</string>
+    <string name="RadioButton">RadioButton</string>
+    <string name="CheckBox">CheckBox</string>
+    <string name="swt">swt</string>
+    <string name="login_btn">login_btn</string>
+    <string name="send_btn">sent_btn</string>
+    <string name="current_temp">current_temp</string>
+
+</resources>

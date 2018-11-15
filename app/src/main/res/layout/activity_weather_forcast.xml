@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sherrylim.androidlabs.WeatherForcast">
+
+    <ImageView
+        android:id="@+id/current"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:layout_below="@+id/wind"
+        android:text="@string/login" />
+    <TextView
+        android:id="@+id/currentTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/current" />
+
+    <TextView
+        android:id="@+id/minTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/maxTemp"
+        android:text="@string/min" />
+
+    <TextView
+        android:id="@+id/maxTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/currentTemp"
+        android:text="@string/max" />
+
+    <TextView
+        android:id="@+id/wind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:layout_below="@+id/currentTemp"
+        android:layout_marginTop="33dp"
+        android:text="@string/wind" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:layout_below="@+id/current"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:visibility="invisible" />
+
+</RelativeLayout>
