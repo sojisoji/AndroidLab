@@ -1,5 +1,7 @@
 package com.example.sherrylim.androidlabs;
 
+
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,9 +21,9 @@ public class StartActivity extends Activity {
         Button button1 = findViewById(R.id.button1);
 
         button1.setOnClickListener(e -> {
-                Intent secondIntent = new Intent(StartActivity.this,
-                        ListItemsActivity.class);
-                startActivityForResult(secondIntent, 50);
+            Intent secondIntent = new Intent(StartActivity.this,
+                    ListItemsActivity.class);
+            startActivityForResult(secondIntent, 50);
 
         });
 
@@ -30,10 +32,10 @@ public class StartActivity extends Activity {
 
         button2.setOnClickListener(e -> {
 
-                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
-                Intent thirdIntent = new Intent(StartActivity.this,
-                        ChatWindow.class);
-                startActivity(thirdIntent);
+            Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+            Intent thirdIntent = new Intent(StartActivity.this,
+                    ChatWindow.class);
+            startActivity(thirdIntent);
 
         });
         Button button3 = findViewById(R.id.button3);
@@ -42,6 +44,15 @@ public class StartActivity extends Activity {
             Intent fourthIntent = new Intent(StartActivity.this,
                     WeatherForcast.class);
             startActivity(fourthIntent);
+
+        });
+
+        Button button4 = findViewById(R.id.button4);
+
+        button4.setOnClickListener(e -> {
+            Intent fifthIntent = new Intent(StartActivity.this,
+                    TestToolbar.class);
+            startActivity(fifthIntent);
 
         });
 

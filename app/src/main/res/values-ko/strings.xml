@@ -35,6 +35,9 @@
     <string name="message">메세지</string>
     <string name="ID">아이디</string>
     <string name="delete">삭제</string>
+    <string name="title_activity_test_toolbar">테스트툴바</string>
+    <string name="TestToolbarDialog">돌아갈래?</string>
+    <string name="newMessage">새소식</string>
 
 
 </resources>

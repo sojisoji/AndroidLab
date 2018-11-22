@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab7</string>
+    <string name="app_name">Lab8</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\'m a button</string>
     <string name="login">login</string>
@@ -35,5 +35,7 @@
     <string name="login_btn">login_btn</string>
     <string name="send_btn">sent_btn</string>
     <string name="current_temp">current_temp</string>
-
+    <string name="title_activity_test_toolbar">Test Toolbar</string>
+    <string name="TestToolbarDialog">Do you want to go back?</string>
+    <string name="newMessage">New Message</string>
 </resources>
